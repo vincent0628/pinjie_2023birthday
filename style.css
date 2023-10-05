@@ -4,6 +4,7 @@
     margin: 0;
     font-family: 'Bodoni Moda', serif;
 }
+
 body{
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bday.gif);
@@ -28,9 +29,9 @@ body{
 }
 .block{
     position: absolute;
-    top:200px;
-    right: 600px;
-    perspective: 800px;
+    /* top:200px;
+    right: 600px; */
+    perspective: 10%;
 }
 .outside,.inside{
     width: 100%;
@@ -71,7 +72,7 @@ body{
     padding: 0 0.8rem;
 
     transform: rotateY(10deg) rotateX(20deg);
-    position: absolute;
+    position: relative;
 }
 .frames img{
     width: 125px;
@@ -86,16 +87,26 @@ body{
 }
 .frames:nth-child(1)
 {
-    top:-110px;
+    /* top:-110px; */
     z-index: -1;
     background-color: coral;
 }
 .frames:nth-child(2){
-    top:20px;
+    /* top:20px; */
     background-color: goldenrod;
 }
 .frames:nth-child(3)
 {
-    top:150px;
+    /* top:150px; */
     background-color: burlywood;
+}
+.row.no-gutter [class*='col-']:first-child:not(:only-child) {
+    padding-right: 0;
+}
+.row.no-gutter [class*='col-']:last-child:not(:only-child) {
+    padding-left: 0;
+}
+.row.no-gutter [class*='col-']:not(:first-child):not(:last-child):not(:only-child) {
+    padding-right: 0;
+    padding-left: 0;
 }
